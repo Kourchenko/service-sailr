@@ -1,0 +1,12 @@
+const database = 'test';
+
+// The current database to use.
+use(database);
+
+db.account.insertMany([
+    {"name": "Google", "URL": "https://www.google.com"},
+    {"name": "Bing", "URL": "https://www.bing.com"},
+    {"name": "Yahoo", "URL": "https://www.yahoo.com"},
+    {"name": "Microsoft", "URL": "https://www.microsoft.com"},
+    {"name": "MongoDB", "URL": "https://www.mongodb.com"}
+])

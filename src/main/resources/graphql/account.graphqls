@@ -1,0 +1,26 @@
+type Account {
+    id: ID!
+    name: String
+    url: String
+    accountHttpStatus: AccountHttpStatus
+}
+
+type AccountHttpStatus {
+    is2xxSuccessful: Boolean
+    value: Int
+    reasonPhrase: String
+}
+
+type AccountPage {
+    accounts: [Account]
+    count: Int
+    totalCount: Int
+    page: Int
+    totalPages: Int
+}
+
+input AccountInput {
+    id: ID
+    name: String
+    url: String
+}

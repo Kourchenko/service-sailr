@@ -1,0 +1,15 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    account(accountId: ID): Account
+    accounts(limit: Int, offset: Int): AccountPage
+}
+
+type Mutation {
+    createAccount(account: AccountInput): Account
+    updateAccount(account: AccountInput): Account
+    deleteAccount(accountId: ID!, limit: Int, offset: Int): AccountPage
+}
